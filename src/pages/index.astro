@@ -10,41 +10,155 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
+
 	<body>
 		<Header />
+
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<div class="hero-content">
+					<h1>High-End Real Estate Photography That Sells Homes Faster</h1>
+
+					<p>
+						Professional photography, cinematic visuals, and clean real estate media designed to
+						make listings stand out and attract serious buyers.
+					</p>
+
+					<div class="cta-buttons">
+						<a
+							class="btn primary"
+							href="https://snapstpete.fotello.co/book"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Book a Shoot
+						</a>
+
+						<a class="btn secondary" href="/about.astro">
+							Contact Now
+						</a>
+					</div>
+
+					<div class="trust-line">
+						<p>Serving St. Petersburg & surrounding areas • Fast turnaround • Realtor trusted</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="features">
+				<div class="feature">
+					<h3>HDR Photography</h3>
+					<p>Bright, balanced, and detail-rich images that make every property shine.</p>
+				</div>
+
+				<div class="feature">
+					<h3>Drone & Aerials</h3>
+					<p>Showcase property layouts, neighborhoods, and premium views from above.</p>
+				</div>
+
+				<div class="feature">
+					<h3>Fast Delivery</h3>
+					<p>Edited photos delivered quickly so you can list faster and sell sooner.</p>
+				</div>
+			</section>
 		</main>
+
 		<Footer />
 	</body>
+
+	<style>
+		main {
+			padding: 0;
+			margin: 0;
+		}
+
+		.hero {
+			min-height: 80vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 4rem 1.5rem;
+			background: linear-gradient(135deg, #0f172a, #111827);
+			color: white;
+		}
+
+		.hero-content {
+			max-width: 800px;
+		}
+
+		.hero h1 {
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+			line-height: 1.2;
+		}
+
+		.hero p {
+			font-size: 1.2rem;
+			opacity: 0.9;
+			margin-bottom: 2rem;
+		}
+
+		.cta-buttons {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-bottom: 1.5rem;
+		}
+
+		.btn {
+			padding: 0.9rem 1.4rem;
+			border-radius: 10px;
+			text-decoration: none;
+			font-weight: 600;
+			transition: 0.2s ease;
+		}
+
+		.btn.primary {
+			background: #3b82f6;
+			color: white;
+		}
+
+		.btn.primary:hover {
+			background: #2563eb;
+		}
+
+		.btn.secondary {
+			background: transparent;
+			border: 1px solid white;
+			color: white;
+		}
+
+		.btn.secondary:hover {
+			background: white;
+			color: #111827;
+		}
+
+		.trust-line p {
+			font-size: 0.9rem;
+			opacity: 0.7;
+		}
+
+		.features {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 2rem;
+			padding: 4rem 2rem;
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		.feature {
+			text-align: center;
+		}
+
+		.feature h3 {
+			margin-bottom: 0.5rem;
+		}
+
+		.feature p {
+			opacity: 0.8;
+		}
+	</style>
 </html>
